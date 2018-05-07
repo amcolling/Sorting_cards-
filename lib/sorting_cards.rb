@@ -7,17 +7,6 @@ class Card
     @card_suit = card_suit
   end
 
-  def response(respond)
-    @card_value = respond
-  end
-
-  def correct?
-    true
-  end
-
-  def feedback(response)
-    response
-  end 
 
 
 

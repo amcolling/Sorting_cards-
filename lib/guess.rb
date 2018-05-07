@@ -1,9 +1,24 @@
 class Guess
-  attr_reader :value,
-              :suit
+  attr_reader :response,
+              :card
 
-  def initialize(value, suit)
-    @value = value
-    @suit = suit
+  def initialize(response, card)
+    @response = response
+    @card = card
   end
+
+  def correct
+    if @response == @card
+      true
+    else
+      false
+    end 
+  end
+
+  def feedback(response)
+    response
+  end
+
+
+
 end
