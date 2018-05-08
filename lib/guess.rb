@@ -1,3 +1,5 @@
+require './lib/sorting_cards'
+
 class Guess
   attr_reader :response,
               :card
@@ -7,17 +9,25 @@ class Guess
     @card = card
   end
 
-  def correct
-    if @response == @card
+  def correct?
+    @response == card.correct_card
       true
-    else
-      false
-    end 
   end
 
-  def feedback(response)
-    response
+  def incorrect?
+    @response != card.correct_card
+    false
   end
+
+  def feedback
+    if @response == card.correct_card
+      "Correct!"
+    else
+      "Incorrect"
+    end
+  end 
+
+
 
 
 
