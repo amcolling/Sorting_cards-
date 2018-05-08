@@ -2,7 +2,7 @@ require './lib/sorting_cards'
 require 'pry'
 
 class Deck
-  attr_reader :cards
+  attr_accessor :cards
 
 
   def initialize(cards)
@@ -11,7 +11,7 @@ class Deck
 
   def count
     3
-  end 
+  end
 
 
 end
