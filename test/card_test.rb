@@ -1,6 +1,6 @@
 require 'minitest/autorun'
 require 'minitest/pride'
-require './lib/sorting_cards'
+require './lib/card'
 require './lib/guess'
 
 # card = Card.new("Ace", "Spades")

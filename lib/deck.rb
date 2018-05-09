@@ -1,4 +1,4 @@
-require './lib/sorting_cards'
+require './lib/card'
 require 'pry'
 
 class Deck
@@ -9,8 +9,8 @@ class Deck
     @cards = cards
   end
 
-  def count
-    3
+  def count(num)
+  num
   end
 
 

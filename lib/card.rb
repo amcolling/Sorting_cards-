@@ -1,8 +1,8 @@
 require 'pry'
 class Card
   attr_accessor :card_value,
-                :card_suit,
-                :correct_card
+                :card_suit
+
 
   def initialize(card_value, card_suit)
     @card_value = card_value

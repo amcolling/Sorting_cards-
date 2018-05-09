@@ -1,4 +1,4 @@
-require './lib/sorting_cards'
+require './lib/card'
 
 class Guess
   attr_accessor :response,
@@ -11,13 +11,10 @@ class Guess
   end
 
   def correct?
-    @response == card.correct_card
+    if @response == card.correct_card
       true
-  end
-
-  def incorrect?
-    @response != card.correct_card
-    false
+    else
+    end
   end
 
   def feedback
