@@ -1,3 +1,4 @@
+require 'pry'
 class Round
 attr_accessor :deck,
             :guesses,
@@ -20,15 +21,17 @@ attr_accessor :deck,
     guesser
   end
 
-  def feedback
-    
-    if @guesses[0]
-    "Correct!"
+  def number_correct?
+  @number_correct += 1
+    if @guesses.correct?
+    @guesses.correct?
     else
-    "Incorrect"
+      @guesses.incorrect?
     end
-
   end
+
+
+
 
 
 

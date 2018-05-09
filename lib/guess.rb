@@ -2,8 +2,8 @@ require './lib/sorting_cards'
 
 class Guess
   attr_accessor :response,
-                :card,
-                :feedback
+                :card
+
 
   def initialize(response, card)
     @response = response
