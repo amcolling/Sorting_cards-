@@ -22,11 +22,11 @@ attr_accessor :deck,
   end
 
   def number_correct?
-  @number_correct += 1
-    if @guesses.correct?
-    @guesses.correct?
+    @number_correct += 1
+    if @guesses.first.correct?
+    @guesses.first.correct?
     else
-      @guesses.incorrect?
+      @guesses.first
     end
   end
 
