@@ -38,20 +38,31 @@ class RoundTest < Minitest::Test
     round = Round.new(deck)
     result = round.record_guess("3 of Hearts")
     assert_instance_of Guess, result
+    assert_equal 1 , round.guesses.count
   end
+
 
   def test_feedback
     card_1 = Card.new("3","Hearts")
     card_2 = Card.new("4", "Clubs")
     deck = Deck.new([card_1, card_2])
     round = Round.new(deck)
-
     round.record_guess("3 of Hearts")
     assert_equal "Correct!", round.feedback
   end
 
+  def test_number_correct
+    card_1 = Card.new("3","Hearts")
+    card_2 = Card.new("4", "Clubs")
+    deck = Deck.new([card_1, card_2])
+    round = Round.new(deck)
+    round.number_correct
+    assert_equal 1, round.number_correct
+  end
 
-  
+  # => 1
+
+
 
 
 
@@ -62,8 +73,6 @@ end
 
 
 
-# round.number_correct
-# => 1
 # round.current_card
 # => #<Card:0x007ffdf1820a90 @value="4", @suit="Clubs">
 # round.record_guess("Jack of Diamonds")

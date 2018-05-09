@@ -1,11 +1,13 @@
 class Round
 attr_accessor :deck,
-            :guesses
+            :guesses,
+            :number_correct
 
 
   def initialize(deck)
   @deck = deck
   @guesses = []
+  @number_correct = 0
   end
 
   def current_card
@@ -19,11 +21,13 @@ attr_accessor :deck,
   end
 
   def feedback
+    
     if @guesses[0]
     "Correct!"
     else
     "Incorrect"
     end
+
   end
 
 
