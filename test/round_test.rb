@@ -65,17 +65,3 @@ class RoundTest < Minitest::Test
     assert_equal 50, round.percent_correct
   end
 end
-
-
-# round.current_card
-# => #<Card:0x007ffdf1820a90 @value="4", @suit="Clubs">
-# round.record_guess("Jack of Diamonds")
-# => #<Guess:0x007ffdf19c8a00 @card=#<Card:0x007ffdf1820a90 @value="4", @suit="Clubs">, @response="Jack of Diamonds">
-# round.guesses.count
-# => 2
-# round.guesses.last.feedback
-# => "Incorrect."
-# round.number_correct
-# => 1
-# round.percent_correct
-# => 50

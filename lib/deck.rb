@@ -9,22 +9,20 @@ class Deck
   end
 
   def count(num)
-  num
-  binding.pry
+    num
   end
 
+  def sorting_the_deck
+    loop do
 
-  # def sorting_the_deck
-  #   n = @cards.length
-  #
-  #   loop do
-  #
-  #   swapped = false
-  #   (n-1).times do |i|
-  #     if n[i] > n[i + 1]
-  #       n[i], n
-  #
-  #       end
-
-
+      swapped = false
+      (@cards.length - 1).times do |i|
+        if @cards[i] > @cards[i + 1]
+          @cards[i], @cards[i + 1] = @cards[i + 1], @cards[i]
+          swapped = true
+        end
+        end
+        break
+      end
+  end
 end

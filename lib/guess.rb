@@ -24,9 +24,4 @@ class Guess
       "Incorrect"
     end
   end
-
-
-
-
-
 end
