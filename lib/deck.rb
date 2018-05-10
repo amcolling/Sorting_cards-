@@ -14,7 +14,6 @@ class Deck
 
   def sorting_the_deck
     loop do
-
       swapped = false
       (@cards.length - 1).times do |i|
         if @cards[i] > @cards[i + 1]

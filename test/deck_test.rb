@@ -28,6 +28,6 @@ class DeckTest < Minitest::Test
     card_3 = Card.new("5", "Diamonds")
     deck = Deck.new([card_1, card_2, card_3])
     deck.count(3)
-    assert_instance_of Deck, deck.sorting_the_deck
+    assert_equal [card_1, card_2, card_3], deck.sorting_the_deck
   end
 end
