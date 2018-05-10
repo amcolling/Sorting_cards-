@@ -29,5 +29,6 @@ class DeckTest < Minitest::Test
     deck = Deck.new([card_1, card_2, card_3])
     deck.count(3)
     assert_equal [card_1, card_2, card_3], deck.sorting_the_deck
+    
   end
 end
