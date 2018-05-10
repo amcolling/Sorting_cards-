@@ -13,15 +13,16 @@ class Deck
   end
 
   def sorting_the_deck
-    loop do
-      swapped = false
-      (@cards.length - 1).times do |i|
-        if @cards[i] > @cards[i + 1]
+    (@cards.length - 1).times do |i|
+      while i > 0
+        if @cards[i].card_value > @cards[i + 1].card_value
           @cards[i], @cards[i + 1] = @cards[i + 1], @cards[i]
-          swapped = true
+        else
+          break
         end
+         i -= 1
         end
-        break
       end
   end
+  @cards
 end
