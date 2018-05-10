@@ -17,7 +17,7 @@ attr_accessor :deck,
     @deck.cards[@index_count]
   end
 
-  
+
 
   def record_guess(response)
     guesser = Guess.new(response, current_card)
@@ -25,26 +25,14 @@ attr_accessor :deck,
     if guesser.correct?
       @number_correct += 1
     end
+    @index_count += 1
+    guesser
   end
 
-  def number_correct?
-# # correct_card = Card.new(@guesses.guess.split(" ").first, @guesses.guess.split(" ").last)
-#     if guesser.correct? # ["3 of hearts"]
-#       @number_correct += 1
-#       else
-#         guess
-#     end
+  def percent_correct
+    (@number_correct.to_f/@guesses.count) * 100
+
   end
-
-
-
-
-
-
-
-
-
-
 
 
 end
